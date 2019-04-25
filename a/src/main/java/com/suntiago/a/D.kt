@@ -2,8 +2,9 @@ package com.suntiago.a
 
 /**
  * Created by Zaiyu on 2019/4/17.
+ * 数据相关处理 data processing
  */
-object A {
+object D {
 
     /**
      * 判断des 是否在start~end 区间内
@@ -18,4 +19,5 @@ object A {
     fun between(des: Int, start: Int, end: Int): Boolean = des in start..end
     fun between(des: Float, start: Float, end: Float): Boolean = des in start..end
     fun between(des: Double, start: Double, end: Double): Boolean = des in start..end
+
 }
