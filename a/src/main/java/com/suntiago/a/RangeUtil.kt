@@ -4,7 +4,7 @@ package com.suntiago.a
  * Created by Zaiyu on 2019/4/17.
  * 数据相关处理 data processing
  */
-object D {
+object RangeUtil {
 
     /**
      * 判断des 是否在start~end 区间内

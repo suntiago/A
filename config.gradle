@@ -1,0 +1,41 @@
+ext {
+    app = [
+            minifyEnabled  : false,
+            shrinkResources: false,
+            zipAlignEnabled: true
+    ]
+
+
+    android = [
+            applicationId             : "com.viroyal.kechengpad",
+            versionCode               : 100,
+            versionName               : "1.0.0",
+            minSdkVersion             : 17,
+            targetSdkVersion          : 27,
+            compileSdkVersion         : 28,
+            buildToolsVersion         : "28.0.3",
+            sourceCompatibilityVersion: JavaVersion.VERSION_1_8,
+            targetCompatibilityVersion: JavaVersion.VERSION_1_8
+    ]
+
+    sign = [
+            storeFile       : '../app/viroyalSignKey.jks',
+            storePassword   : '84159009',
+            keyAlias        : 'viroyal-nj',
+            keyPassword     : '84159009',
+            v2SigningEnabled: false
+    ]
+
+    dependencies = [
+            // Test Dependencies
+            junit              : 'junit:junit:4.12',
+            //android dependencies
+            appcompatV7        : 'com.android.support:appcompat-v7:25.1.0',
+            constraint         : 'com.android.support.constraint:constraint-layout:1.1.0',
+            multidex           : 'com.android.support:multidex:1.0.1',
+            devconfig          : 'com.github.suntiago:devconfig:dd4f233a7a',
+            kotlin_stdlib      : 'org.jetbrains.kotlin:kotlin-stdlib-jre7:1.2.30',
+            fresco             : 'com.facebook.fresco:fresco:1.2.0',
+            baserecyclerview   : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.5',
+    ]
+}

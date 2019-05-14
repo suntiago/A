@@ -5,22 +5,27 @@ apply plugin: 'maven'
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.suntiago'
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled rootProject.ext.app.minifyEnabled
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.android.sourceCompatibilityVersion
+        targetCompatibility rootProject.ext.android.targetCompatibilityVersion
     }
 
 }
